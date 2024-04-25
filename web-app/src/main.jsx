@@ -14,7 +14,7 @@ import Activites from './page/activites.jsx'
 
 const router=createBrowserRouter([
   {
-    path: "/",
+    path: "/login",
     element: <Login/>
   },
 
@@ -24,7 +24,7 @@ const router=createBrowserRouter([
   },
 
   {
-    path: "accueil",
+    path: "/",
     element: <Accueil/>
   },
 
