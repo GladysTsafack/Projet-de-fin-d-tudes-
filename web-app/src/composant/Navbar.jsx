@@ -21,61 +21,27 @@ function Navbar(){
                     </div>
 
                     <div className="col-6 col-lg-3 text-right">
-                        <a href="/" className="small mr-3">
+                        {/* <a href="/" className="small mr-3">
                         <span className="icon-lock"></span>
                         Log In
                         </a>
                         <a href="/register" className="small">
                         <span className="icon-person"></span>
                         Register
-                        </a>
-                    </div>
-
-                    </div>
-                </div>
-                </div>
-                <div className="sticky-nav js-sticky-header">
-                <div className="container position-relative">
+                        </a> */}
+                        
                     <div className="site-navigation text-center">
-                    <a href="index.html" className="logo menu-absolute m-0">Learner<span className="text-primary">.</span></a>
+                    
 
                     <ul className="js-clone-nav d-none d-lg-inline-block site-menu">
-                        <li className="active"><a href="/accueil">Accueil</a></li>
                         <li className="has-children">
-                        <a href="/activites">Activités</a>
-                        <ul className="dropdown">
-                            <li><a href="elements.html">Categorie</a></li>
-                            <li className="has-children">
-                            <a href="#">Categorie</a>
-                            <ul className="dropdown">
-                                <li><a href="#">Sub Menu One</a></li>
-                                <li><a href="#">Sub Menu Two</a></li>
-                                <li><a href="#">Sub Menu Three</a></li>
-                            </ul>
-                            </li>
-                            <li><a href="#">Menu Three</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="staff.html">Planning</a></li>
-                        <li><a href="news.html">Recommandations</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li class="nav-item dropdown pe-3">
-
                             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                                <img src="./profile-img.jpg" alt="Profile" class="rounded-circle"/>
-                                <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                                <img src="/images/profile-img.jpg" alt="Profile" class="rounded-circle mx-3" width={30} />
+                                <span class="d-none d-md-block  ps-2">K. Anderson</span>
                             </a>
-
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                                <li class="dropdown-header">
-                                    <h6>Kevin Anderson</h6>
-                                    <span>Web Designer</span>
-                                </li>
-
+                            <ul className="dropdown">
                                 <li>
-                                    <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                    <a class="dropdown-item d-flex align-items-center" href="">
                                         <i class="bi bi-person"></i>
                                         <span>My Profile</span>
                                     </a>
@@ -85,7 +51,7 @@ function Navbar(){
                                 </li>
 
                                 <li>
-                                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <a class="dropdown-item d-flex align-items-center" href="">
                                     <i class="bi bi-gear"></i>
                                     <span>Account Settings</span>
                                 </a>
@@ -95,7 +61,7 @@ function Navbar(){
                                 </li>
 
                                 <li>
-                                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                <a class="dropdown-item d-flex align-items-center" href="">
                                     <i class="bi bi-question-circle"></i>
                                     <span>Need Help?</span>
                                 </a>
@@ -110,12 +76,44 @@ function Navbar(){
                                     <span>Sign Out</span>
                                 </a>
                                 </li>
-
                             </ul>
                         </li>
+                     
                     </ul>
 
-                    <a href="#" className="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
+                   
+                    </div>
+                    </div>
+
+                    </div>
+                </div>
+                </div>
+                <div className="sticky-nav js-sticky-header">
+                <div className="container position-relative">
+                    <div className="site-navigation text-center">
+                    <a href="index.html" className="logo menu-absolute m-0">Learner<span className="text-primary">.</span></a>
+
+                    <ul className="js-clone-nav d-none d-lg-inline-block site-menu">
+                        <li className="active"><a href="/">Accueil</a></li>
+                        <li className="has-children">
+                        <a href="/activites">Activités</a>
+                        <ul className="dropdown">
+                            <li><a href="/activites">Categorie</a></li>
+                            <li className="has-children">
+                            <a href="#">Categorie</a>
+                            {/* <ul className="dropdown">
+                                <li><a href="#">Sub Menu One</a></li>
+                                <li><a href="#">Sub Menu Two</a></li>
+                                <li><a href="#">Sub Menu Three</a></li>
+                            </ul> */}
+                            </li>
+                        </ul>
+                        </li>
+                        <li><a href="">Planning</a></li>
+                        <li><a href="">Recommandations</a></li>
+                        <li><a href="">About</a></li>
+                        
+                    </ul>
 
                     <a href="#" className="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
                         <span></span>
