@@ -98,9 +98,9 @@ function Navbar(){
                         <li className="has-children">
                         <a href="/activites">Activités</a>
                         <ul className="dropdown">
-                            <li><a href="/activites">liste des activites</a></li>
+                            <li><a href="/activites">Categorie</a></li>
                             <li className="has-children">
-                            <a href="/categorie">Categorie</a>
+                            <a href="#">Categorie</a>
                             {/* <ul className="dropdown">
                                 <li><a href="#">Sub Menu One</a></li>
                                 <li><a href="#">Sub Menu Two</a></li>
