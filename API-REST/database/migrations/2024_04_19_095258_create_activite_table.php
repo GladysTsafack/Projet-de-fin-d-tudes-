@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->date('Date');
-            $table->time('heure');
+            $table->time('heure_debut');
+            $table->time('heure_fin');
+            $table->text('localisation');
             $table->timestamps();
             $table->foreignIdFor(Categorie::class);
             $table->foreignIdFor(User::class);
