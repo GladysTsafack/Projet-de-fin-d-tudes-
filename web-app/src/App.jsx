@@ -1,16 +1,19 @@
 import { useState } from 'react'
+// import { SessionProvider,userSession } from 'react-session' 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './composant/Navbar'
 
+
 function App() {
   const [count, setCount] = useState(0)
-
+  // const { session,setSession } = userSession() 
   return (
     <>
-      <Navbar></Navbar>
-      <div class="untree_co-hero overlay header">
+       <Navbar></Navbar>
+    
+    <div class="untree_co-hero overlay header">
 
 
     <div class="container">

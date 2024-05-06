@@ -2,6 +2,11 @@ import Footer from "../composant/Footer";
 import Navbar from "../composant/Navbar";
 
 function Accueil(){
+    const handleSubmitlogin = (e)=>{
+
+    }
+    
+ 
     return(
         <div>
             <Navbar/>
