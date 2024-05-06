@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-
+// import { SessionProvider,userSession } from 'react-session'
 
 function Login(){
     const [formData,setForData] = useState({
@@ -22,18 +22,23 @@ function Login(){
         }));
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmitlogin = (e)=>{
+        // const { session,setSession } = userSession()
+
         e.preventDefault();
-        if(formData.password != ''){
-            axios.post('http://localhost:8000/api/login', formData).then((Response)=>{
-                console.log(Response.data);
-                console.log('ok')
-                navigate("/accueil")
+        axios.post('http://localhost:8000/api/login', formData).then((Response)=>{
+                
+               if (Response.data['id'] != '') {
+                localStorage.setItem('id', Response.data['id']  );
+                localStorage.setItem('nom', Response.data['nom']  );
+                localStorage.setItem('adresse', Response.data['adresse']  );
+                   window.location.href = "accueil";
+               }
             }).catch((error)=>{
-                console.error('Erreur lors de la connexion compte:', error)
+                console.error('Erreur lors de la creation du compte:', error)
             })
             console.log(formData)
-        }
+
     }
 
     return(
@@ -60,7 +65,7 @@ function Login(){
 
             <div class="row mb-5 justify-content-center">
                 <div class="col-lg-5 mx-auto order-1" data-aos="fade-up" data-aos-delay="200">
-                <form onSubmit={handleSubmit} class="form-box">
+                <form onSubmit={handleSubmitlogin} class="form-box">
                     <div class="row">
                     <div class="col-12 mb-3">
                         <input type="text" class="form-control" name="email" onChange={handlechange} placeholder="Email" />

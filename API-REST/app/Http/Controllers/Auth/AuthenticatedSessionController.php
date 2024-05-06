@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Auth\Exception;
+use Illuminate\Support\Str;
 use App\Models\User;
 class AuthenticatedSessionController extends Controller
 {
@@ -17,16 +18,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $request->authenticate();
-
-            $request->session()->regenerate();
-
-            return response()->noContent();
-        } catch (Exception $th) {
-               return json_decode($th);
-        }
-
+        $user = User::where('email',$request->email)->first();
+        if(Hash::check($request->password, $user->password)){
+            return response()->json($user);
+        }else
+        return response()->json(['alert'=>'error']);
 
     }
 

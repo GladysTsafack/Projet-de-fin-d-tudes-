@@ -1,4 +1,7 @@
 function Navbar(){
+    // console.log(session.user);
+    const id = localStorage.getItem('id');
+    const nom = localStorage.getItem('nom');
     return(
         <div>
             <div className="site-mobile-menu">
@@ -37,7 +40,7 @@ function Navbar(){
                         <li className="has-children">
                             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                                 <img src="/images/profile-img.jpg" alt="Profile" class="rounded-circle mx-3" width={30} />
-                                <span class="d-none d-md-block  ps-2">K. Anderson</span>
+                                <span class="d-none d-md-block  ps-2">{nom}</span>
                             </a>
                             <ul className="dropdown">
                                 <li>
@@ -94,7 +97,7 @@ function Navbar(){
                     <a href="index.html" className="logo menu-absolute m-0">Learner<span className="text-primary">.</span></a>
 
                     <ul className="js-clone-nav d-none d-lg-inline-block site-menu">
-                        <li className="active"><a href="/">Accueil</a></li>
+                        <li className="active"><a href="/accueil">Accueil</a></li>
                         <li className="has-children">
                         <a href="/activites">Activités</a>
                         <ul className="dropdown">
